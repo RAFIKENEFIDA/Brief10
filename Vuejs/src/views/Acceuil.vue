@@ -45,7 +45,7 @@
                   <i style="font-size:40px" class="fas fa-user-circle"></i>
 
                   <div class="media-body ml-3">
-                    Kenneth Frazier
+                    {{ post.name[0].name }}
                   </div>
                 </div>
                 <h3>{{ post.title }}</h3>
@@ -60,24 +60,16 @@
               </div>
               <div class="card-footer">
                 <a href="javascript:void(0)" class="d-inline-block text-muted">
-                  <small class="align-middle">
-                    <strong>123</strong> Likes</small
-                  >
                 </a>
                 <a
                   href="javascript:void(0)"
                   class="d-inline-block text-muted ml-3"
                 >
-                  <small class="align-middle">
-                    <strong>12</strong> Comments</small
-                  >
                 </a>
                 <a
                   href="javascript:void(0)"
                   class="d-inline-block text-muted ml-3"
                 >
-                  <i class="ion ion-md-share align-middle"></i>&nbsp;
-                  <small class="align-middle">Repost</small>
                 </a>
               </div>
             </div>

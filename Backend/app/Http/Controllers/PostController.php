@@ -75,8 +75,6 @@ class PostController extends Controller
 
 
 
-
-
         $posts = DB::table('todos')
             ->select('todos.title', 'todos.body', 'todos.id', 'todos.created_by')
             ->get();
@@ -84,6 +82,7 @@ class PostController extends Controller
 
         foreach ($posts as $post) {
             $post->commentaires = DB::table('commentaires')->where('id_post', '=', $post->id)->get();
+            $post->name = DB::table('users')->select('name')->where('id', '=', $post->created_by)->get();
         }
 
         // $product = Todo::all();
